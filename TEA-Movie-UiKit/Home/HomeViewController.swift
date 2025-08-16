@@ -10,14 +10,17 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
-    let networkingService = NetworkingService.shared
-    var movies: [ShowModel] = []
+    
+    @IBOutlet weak var loadingView: UIActivityIndicatorView!
+    private let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavBar()
         setUpTV()
-        Task{
-            await loadData()
+        bindViewModel()
+        Task {
+            await viewModel.load()
         }
     }
     // MARK: - Functions
@@ -26,7 +29,6 @@ class HomeViewController: UIViewController {
         moviesTableView.dataSource = self
         moviesTableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
         moviesTableView.separatorStyle = .none
-        
     }
     func setUpNavBar(){
         navigationItem.title = "Movies"
@@ -36,15 +38,21 @@ class HomeViewController: UIViewController {
             .font: UIFont.boldSystemFont(ofSize: 34)
         ]
     }
-    func loadData()async{
-        do {
-            let movies = try await networkingService.fetchShows(media: "movie", type: "trending")
-            self.movies = movies
-            DispatchQueue.main.async {
-                self.moviesTableView.reloadData()
+    private func bindViewModel() {
+        viewModel.onDataUpdated = { [weak self] in
+            self?.moviesTableView.reloadData()
+        }
+        viewModel.onLoading = { isLoading in
+            if isLoading {
+                self.loadingView.startAnimating()
+            } else {
+                self.loadingView.stopAnimating()
             }
-        } catch let error {
-            print("error \(error)")
+        }
+        viewModel.onError = { [weak self] error in
+            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default))
+            self?.present(alert, animated: true)
         }
     }
     
@@ -52,11 +60,11 @@ class HomeViewController: UIViewController {
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        movies.count
+        viewModel.numberOfRows()
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        let movie = movies[indexPath.row]
+        let movie = viewModel.movie(at: indexPath)
         cell.setMovie(movie: movie)
         return cell
     }
@@ -65,8 +73,9 @@ extension HomeViewController: UITableViewDelegate , UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let movieDetailsVC = MovieDetailsViewController(nibName: "MovieDetailsViewController", bundle: nil)
-        let movie = self.movies[indexPath.row]
+        let movie = viewModel.movie(at: indexPath)
         movieDetailsVC.movie = movie
         self.navigationController?.pushViewController(movieDetailsVC, animated: true)
     }
+    
 }

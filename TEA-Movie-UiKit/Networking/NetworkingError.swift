@@ -14,6 +14,7 @@ enum NetworkingError: Error, LocalizedError {
     case responseError
     case dataDecodingError(Error)
     case youtubeAPIError(String)
+    case OfflineNoCache
     
     
     case unknownError(String)
@@ -32,6 +33,8 @@ enum NetworkingError: Error, LocalizedError {
             return "An unknown error occurred: \(error)"
         case .youtubeAPIError(let errorMessage):
             return "YouTube API error: \(errorMessage)"
+        case .OfflineNoCache:
+            return "No Internet...!"
         }
     }
 }

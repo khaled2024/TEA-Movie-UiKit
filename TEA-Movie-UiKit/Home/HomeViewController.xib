@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="TEA_Movie_UiKit" customModuleProvider="target">
             <connections>
+                <outlet property="loadingView" destination="r1u-2I-Q5D" id="LIJ-de-enY"/>
                 <outlet property="moviesTableView" destination="xCn-H9-kgT" id="saJ-bf-REJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -24,12 +25,17 @@
                     <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="r1u-2I-Q5D">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                </activityIndicatorView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="xCn-H9-kgT" secondAttribute="trailing" id="7iE-3i-pcu"/>
+                <constraint firstItem="r1u-2I-Q5D" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="C7C-iM-6dY"/>
                 <constraint firstItem="xCn-H9-kgT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KQK-YP-c9Y"/>
+                <constraint firstItem="r1u-2I-Q5D" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WZv-b8-ehj"/>
                 <constraint firstItem="xCn-H9-kgT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mRp-jJ-HWQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="xCn-H9-kgT" secondAttribute="bottom" id="xpL-5h-oId"/>
             </constraints>

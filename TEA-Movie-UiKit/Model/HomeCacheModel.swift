@@ -7,9 +7,5 @@
 
 
 struct HomeCacheModel: Codable {
-    let trendingMovies: [ShowModel]
-    let trendingTVs: [ShowModel]
-    let topRatedMovies: [ShowModel]
-    let topRatedTVs: [ShowModel]
-    let randomMovie: ShowModel?
+    let movies: [ShowModel]?
 }
