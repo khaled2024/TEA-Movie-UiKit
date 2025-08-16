@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA29123C2E4FB47000FABCB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29123A2E4FB47000FABCB7 /* Constants.swift */; };
-		EA29124E2E4FB6DB00FABCB7 /* DownloadShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912472E4FB6DB00FABCB7 /* DownloadShowModel.swift */; };
 		EA29124F2E4FB6DB00FABCB7 /* HomeCacheModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912482E4FB6DB00FABCB7 /* HomeCacheModel.swift */; };
 		EA2912502E4FB6DB00FABCB7 /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912492E4FB6DB00FABCB7 /* ResponseError.swift */; };
 		EA2912512E4FB6DB00FABCB7 /* ShowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA29124A2E4FB6DB00FABCB7 /* ShowModel.swift */; };
@@ -34,12 +33,10 @@
 		EA921CE02E4D49A400B90FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CC42E4D49A400B90FA2 /* AppDelegate.swift */; };
 		EA921CE12E4D49A400B90FA2 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CC62E4D49A400B90FA2 /* DownloadsViewController.swift */; };
 		EA921CE22E4D49A400B90FA2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CC92E4D49A400B90FA2 /* HomeViewController.swift */; };
-		EA921CE42E4D49A400B90FA2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CCF2E4D49A400B90FA2 /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EA29123A2E4FB47000FABCB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		EA2912472E4FB6DB00FABCB7 /* DownloadShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadShowModel.swift; sourceTree = "<group>"; };
 		EA2912482E4FB6DB00FABCB7 /* HomeCacheModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCacheModel.swift; sourceTree = "<group>"; };
 		EA2912492E4FB6DB00FABCB7 /* ResponseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseError.swift; sourceTree = "<group>"; };
 		EA29124A2E4FB6DB00FABCB7 /* ShowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowModel.swift; sourceTree = "<group>"; };
@@ -60,7 +57,6 @@
 		EA921CC72E4D49A400B90FA2 /* DownloadsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadsViewController.xib; sourceTree = "<group>"; };
 		EA921CC92E4D49A400B90FA2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EA921CCA2E4D49A400B90FA2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		EA921CCF2E4D49A400B90FA2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		EA921CD42E4D49A400B90FA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA921CD52E4D49A400B90FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA921CD62E4D49A400B90FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -92,7 +88,6 @@
 		EA29124D2E4FB6DB00FABCB7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				EA2912472E4FB6DB00FABCB7 /* DownloadShowModel.swift */,
 				EA2912482E4FB6DB00FABCB7 /* HomeCacheModel.swift */,
 				EA2912492E4FB6DB00FABCB7 /* ResponseError.swift */,
 				EA29124A2E4FB6DB00FABCB7 /* ShowModel.swift */,
@@ -214,14 +209,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		EA921CD02E4D49A400B90FA2 /* MainTabBar */ = {
-			isa = PBXGroup;
-			children = (
-				EA921CCF2E4D49A400B90FA2 /* MainTabBarController.swift */,
-			);
-			path = MainTabBar;
-			sourceTree = "<group>";
-		};
 		EA921CD82E4D49A400B90FA2 /* TEA-Movie-UiKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -230,7 +217,6 @@
 				EA29124D2E4FB6DB00FABCB7 /* Model */,
 				EA2912562E4FB6DB00FABCB7 /* Networking */,
 				EA921CC52E4D49A400B90FA2 /* Delegates */,
-				EA921CD02E4D49A400B90FA2 /* MainTabBar */,
 				EA921CCB2E4D49A400B90FA2 /* Home */,
 				EA2912722E4FD3DE00FABCB7 /* MovieDetails */,
 				EA921CC82E4D49A400B90FA2 /* Downloads */,
@@ -330,7 +316,6 @@
 				EA921CE02E4D49A400B90FA2 /* AppDelegate.swift in Sources */,
 				EA29127A2E50838000FABCB7 /* HomeViewModel.swift in Sources */,
 				EA2912882E50DDE600FABCB7 /* UiView+Gradient.swift in Sources */,
-				EA29124E2E4FB6DB00FABCB7 /* DownloadShowModel.swift in Sources */,
 				EA29124F2E4FB6DB00FABCB7 /* HomeCacheModel.swift in Sources */,
 				EA2912572E4FB6DB00FABCB7 /* NetworkingError.swift in Sources */,
 				EA2912582E4FB6DB00FABCB7 /* NetworkingService.swift in Sources */,
@@ -343,7 +328,6 @@
 				EA29126A2E4FD06600FABCB7 /* MovieCell.swift in Sources */,
 				EA921CE22E4D49A400B90FA2 /* HomeViewController.swift in Sources */,
 				EA29123C2E4FB47000FABCB7 /* Constants.swift in Sources */,
-				EA921CE42E4D49A400B90FA2 /* MainTabBarController.swift in Sources */,
 				EA2912742E4FD3DE00FABCB7 /* MovieDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
