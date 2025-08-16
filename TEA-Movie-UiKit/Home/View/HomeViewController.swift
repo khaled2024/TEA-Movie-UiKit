@@ -10,7 +10,6 @@ import UIKit
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var moviesTableView: UITableView!
-    
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     private let viewModel = HomeViewModel()
     
@@ -23,6 +22,10 @@ class HomeViewController: UIViewController {
             await viewModel.load()
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = false
+    }
     // MARK: - Functions
     func setUpTV(){
         moviesTableView.delegate = self
@@ -30,6 +33,7 @@ class HomeViewController: UIViewController {
         moviesTableView.register(UINib(nibName: "MovieCell", bundle: nil), forCellReuseIdentifier: "MovieCell")
         moviesTableView.separatorStyle = .none
     }
+    
     func setUpNavBar(){
         navigationItem.title = "Movies"
         navigationController?.navigationBar.prefersLargeTitles = true

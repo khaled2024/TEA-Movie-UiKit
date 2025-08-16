@@ -24,6 +24,7 @@
 		EA2912732E4FD3DE00FABCB7 /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA2912712E4FD3DE00FABCB7 /* MovieDetailsViewController.xib */; };
 		EA2912742E4FD3DE00FABCB7 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912702E4FD3DE00FABCB7 /* MovieDetailsViewController.swift */; };
 		EA29127A2E50838000FABCB7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912782E50838000FABCB7 /* HomeViewModel.swift */; };
+		EA2912822E50A6FD00FABCB7 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912802E50A6FD00FABCB7 /* MovieDetailsViewModel.swift */; };
 		EA921C9E2E4D41B600B90FA2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA921C9D2E4D41B600B90FA2 /* Kingfisher */; };
 		EA921CA12E4D41CA00B90FA2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EA921CA02E4D41CA00B90FA2 /* Lottie */; };
 		EA921CD92E4D49A400B90FA2 /* DownloadsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA921CC72E4D49A400B90FA2 /* DownloadsViewController.xib */; };
@@ -55,6 +56,7 @@
 		EA2912702E4FD3DE00FABCB7 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		EA2912712E4FD3DE00FABCB7 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 		EA2912782E50838000FABCB7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		EA2912802E50A6FD00FABCB7 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
 		EA921C842E4D417A00B90FA2 /* TEA-Movie-UiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEA-Movie-UiKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA921CC42E4D49A400B90FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA921CC62E4D49A400B90FA2 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,14 @@
 		EA921CD52E4D49A400B90FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA921CD62E4D49A400B90FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EA2912832E50A87000FABCB7 /* Extensions */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EA921C812E4D417A00B90FA2 /* Frameworks */ = {
@@ -129,8 +139,8 @@
 		EA2912722E4FD3DE00FABCB7 /* MovieDetails */ = {
 			isa = PBXGroup;
 			children = (
-				EA2912702E4FD3DE00FABCB7 /* MovieDetailsViewController.swift */,
-				EA2912712E4FD3DE00FABCB7 /* MovieDetailsViewController.xib */,
+				EA2912812E50A6FD00FABCB7 /* ViewModel */,
+				EA29127C2E50A6E300FABCB7 /* View */,
 			);
 			path = MovieDetails;
 			sourceTree = "<group>";
@@ -139,6 +149,32 @@
 			isa = PBXGroup;
 			children = (
 				EA2912782E50838000FABCB7 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		EA29127B2E50A6DB00FABCB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA921CC92E4D49A400B90FA2 /* HomeViewController.swift */,
+				EA921CCA2E4D49A400B90FA2 /* HomeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA29127C2E50A6E300FABCB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA2912702E4FD3DE00FABCB7 /* MovieDetailsViewController.swift */,
+				EA2912712E4FD3DE00FABCB7 /* MovieDetailsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA2912812E50A6FD00FABCB7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EA2912802E50A6FD00FABCB7 /* MovieDetailsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -181,8 +217,7 @@
 			children = (
 				EA2912792E50838000FABCB7 /* ViewModel */,
 				EA2912682E4FD06600FABCB7 /* MovieCell */,
-				EA921CC92E4D49A400B90FA2 /* HomeViewController.swift */,
-				EA921CCA2E4D49A400B90FA2 /* HomeViewController.xib */,
+				EA29127B2E50A6DB00FABCB7 /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -216,6 +251,7 @@
 		EA921CD82E4D49A400B90FA2 /* TEA-Movie-UiKit */ = {
 			isa = PBXGroup;
 			children = (
+				EA2912832E50A87000FABCB7 /* Extensions */,
 				EA29123B2E4FB47000FABCB7 /* Constants */,
 				EA29124D2E4FB6DB00FABCB7 /* Model */,
 				EA2912562E4FB6DB00FABCB7 /* Networking */,
@@ -247,6 +283,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EA2912832E50A87000FABCB7 /* Extensions */,
 			);
 			name = "TEA-Movie-UiKit";
 			packageProductDependencies = (
@@ -330,6 +369,7 @@
 				EA2912572E4FB6DB00FABCB7 /* NetworkingError.swift in Sources */,
 				EA2912582E4FB6DB00FABCB7 /* NetworkingService.swift in Sources */,
 				EA2912502E4FB6DB00FABCB7 /* ResponseError.swift in Sources */,
+				EA2912822E50A6FD00FABCB7 /* MovieDetailsViewModel.swift in Sources */,
 				EA2912512E4FB6DB00FABCB7 /* ShowModel.swift in Sources */,
 				EA2912522E4FB6DB00FABCB7 /* YoutubeErrorResponse.swift in Sources */,
 				EA2912532E4FB6DB00FABCB7 /* YoutubeResponse.swift in Sources */,
