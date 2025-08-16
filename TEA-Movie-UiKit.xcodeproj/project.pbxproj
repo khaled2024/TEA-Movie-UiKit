@@ -25,20 +25,16 @@
 		EA2912742E4FD3DE00FABCB7 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912702E4FD3DE00FABCB7 /* MovieDetailsViewController.swift */; };
 		EA29127A2E50838000FABCB7 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912782E50838000FABCB7 /* HomeViewModel.swift */; };
 		EA2912822E50A6FD00FABCB7 /* MovieDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912802E50A6FD00FABCB7 /* MovieDetailsViewModel.swift */; };
+		EA2912882E50DDE600FABCB7 /* UiView+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2912862E50DDE600FABCB7 /* UiView+Gradient.swift */; };
 		EA921C9E2E4D41B600B90FA2 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = EA921C9D2E4D41B600B90FA2 /* Kingfisher */; };
-		EA921CA12E4D41CA00B90FA2 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = EA921CA02E4D41CA00B90FA2 /* Lottie */; };
 		EA921CD92E4D49A400B90FA2 /* DownloadsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA921CC72E4D49A400B90FA2 /* DownloadsViewController.xib */; };
 		EA921CDA2E4D49A400B90FA2 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA921CCA2E4D49A400B90FA2 /* HomeViewController.xib */; };
-		EA921CDB2E4D49A400B90FA2 /* IncomingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA921CCD2E4D49A400B90FA2 /* IncomingViewController.xib */; };
-		EA921CDC2E4D49A400B90FA2 /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA921CD22E4D49A400B90FA2 /* SearchViewController.xib */; };
 		EA921CDD2E4D49A400B90FA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA921CD42E4D49A400B90FA2 /* Assets.xcassets */; };
 		EA921CDF2E4D49A400B90FA2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA921CD72E4D49A400B90FA2 /* LaunchScreen.storyboard */; };
 		EA921CE02E4D49A400B90FA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CC42E4D49A400B90FA2 /* AppDelegate.swift */; };
 		EA921CE12E4D49A400B90FA2 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CC62E4D49A400B90FA2 /* DownloadsViewController.swift */; };
 		EA921CE22E4D49A400B90FA2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CC92E4D49A400B90FA2 /* HomeViewController.swift */; };
-		EA921CE32E4D49A400B90FA2 /* IncomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CCC2E4D49A400B90FA2 /* IncomingViewController.swift */; };
 		EA921CE42E4D49A400B90FA2 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CCF2E4D49A400B90FA2 /* MainTabBarController.swift */; };
-		EA921CE52E4D49A400B90FA2 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA921CD12E4D49A400B90FA2 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,29 +53,18 @@
 		EA2912712E4FD3DE00FABCB7 /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
 		EA2912782E50838000FABCB7 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		EA2912802E50A6FD00FABCB7 /* MovieDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewModel.swift; sourceTree = "<group>"; };
+		EA2912862E50DDE600FABCB7 /* UiView+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UiView+Gradient.swift"; sourceTree = "<group>"; };
 		EA921C842E4D417A00B90FA2 /* TEA-Movie-UiKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TEA-Movie-UiKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA921CC42E4D49A400B90FA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA921CC62E4D49A400B90FA2 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		EA921CC72E4D49A400B90FA2 /* DownloadsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadsViewController.xib; sourceTree = "<group>"; };
 		EA921CC92E4D49A400B90FA2 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		EA921CCA2E4D49A400B90FA2 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
-		EA921CCC2E4D49A400B90FA2 /* IncomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingViewController.swift; sourceTree = "<group>"; };
-		EA921CCD2E4D49A400B90FA2 /* IncomingViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IncomingViewController.xib; sourceTree = "<group>"; };
 		EA921CCF2E4D49A400B90FA2 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
-		EA921CD12E4D49A400B90FA2 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		EA921CD22E4D49A400B90FA2 /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
 		EA921CD42E4D49A400B90FA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA921CD52E4D49A400B90FA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA921CD62E4D49A400B90FA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		EA2912832E50A87000FABCB7 /* Extensions */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		EA921C812E4D417A00B90FA2 /* Frameworks */ = {
@@ -90,7 +75,6 @@
 				EA2912602E4FBC8500FABCB7 /* SDWebImage in Frameworks */,
 				EA921C9E2E4D41B600B90FA2 /* Kingfisher in Frameworks */,
 				EA2912622E4FBC8500FABCB7 /* SDWebImageMapKit in Frameworks */,
-				EA921CA12E4D41CA00B90FA2 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +163,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		EA2912872E50DDE600FABCB7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EA2912862E50DDE600FABCB7 /* UiView+Gradient.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EA921C7B2E4D417A00B90FA2 = {
 			isa = PBXGroup;
 			children = (
@@ -222,15 +214,6 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
-		EA921CCE2E4D49A400B90FA2 /* IncomingMovies */ = {
-			isa = PBXGroup;
-			children = (
-				EA921CCC2E4D49A400B90FA2 /* IncomingViewController.swift */,
-				EA921CCD2E4D49A400B90FA2 /* IncomingViewController.xib */,
-			);
-			path = IncomingMovies;
-			sourceTree = "<group>";
-		};
 		EA921CD02E4D49A400B90FA2 /* MainTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,19 +222,10 @@
 			path = MainTabBar;
 			sourceTree = "<group>";
 		};
-		EA921CD32E4D49A400B90FA2 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				EA921CD12E4D49A400B90FA2 /* SearchViewController.swift */,
-				EA921CD22E4D49A400B90FA2 /* SearchViewController.xib */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
 		EA921CD82E4D49A400B90FA2 /* TEA-Movie-UiKit */ = {
 			isa = PBXGroup;
 			children = (
-				EA2912832E50A87000FABCB7 /* Extensions */,
+				EA2912872E50DDE600FABCB7 /* Extensions */,
 				EA29123B2E4FB47000FABCB7 /* Constants */,
 				EA29124D2E4FB6DB00FABCB7 /* Model */,
 				EA2912562E4FB6DB00FABCB7 /* Networking */,
@@ -259,8 +233,6 @@
 				EA921CD02E4D49A400B90FA2 /* MainTabBar */,
 				EA921CCB2E4D49A400B90FA2 /* Home */,
 				EA2912722E4FD3DE00FABCB7 /* MovieDetails */,
-				EA921CD32E4D49A400B90FA2 /* Search */,
-				EA921CCE2E4D49A400B90FA2 /* IncomingMovies */,
 				EA921CC82E4D49A400B90FA2 /* Downloads */,
 				EA921CD42E4D49A400B90FA2 /* Assets.xcassets */,
 				EA921CD52E4D49A400B90FA2 /* Info.plist */,
@@ -284,13 +256,9 @@
 			);
 			dependencies = (
 			);
-			fileSystemSynchronizedGroups = (
-				EA2912832E50A87000FABCB7 /* Extensions */,
-			);
 			name = "TEA-Movie-UiKit";
 			packageProductDependencies = (
 				EA921C9D2E4D41B600B90FA2 /* Kingfisher */,
-				EA921CA02E4D41CA00B90FA2 /* Lottie */,
 				EA29125F2E4FBC8500FABCB7 /* SDWebImage */,
 				EA2912612E4FBC8500FABCB7 /* SDWebImageMapKit */,
 				EA2912642E4FCD8800FABCB7 /* Cosmos */,
@@ -325,7 +293,6 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				EA921C9C2E4D41B600B90FA2 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				EA921C9F2E4D41CA00B90FA2 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				EA29125E2E4FBC8400FABCB7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 				EA2912632E4FCD8800FABCB7 /* XCRemoteSwiftPackageReference "Cosmos" */,
 			);
@@ -347,9 +314,7 @@
 				EA921CD92E4D49A400B90FA2 /* DownloadsViewController.xib in Resources */,
 				EA2912692E4FD06600FABCB7 /* MovieCell.xib in Resources */,
 				EA921CDA2E4D49A400B90FA2 /* HomeViewController.xib in Resources */,
-				EA921CDB2E4D49A400B90FA2 /* IncomingViewController.xib in Resources */,
 				EA2912732E4FD3DE00FABCB7 /* MovieDetailsViewController.xib in Resources */,
-				EA921CDC2E4D49A400B90FA2 /* SearchViewController.xib in Resources */,
 				EA921CDD2E4D49A400B90FA2 /* Assets.xcassets in Resources */,
 				EA921CDF2E4D49A400B90FA2 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -364,6 +329,7 @@
 			files = (
 				EA921CE02E4D49A400B90FA2 /* AppDelegate.swift in Sources */,
 				EA29127A2E50838000FABCB7 /* HomeViewModel.swift in Sources */,
+				EA2912882E50DDE600FABCB7 /* UiView+Gradient.swift in Sources */,
 				EA29124E2E4FB6DB00FABCB7 /* DownloadShowModel.swift in Sources */,
 				EA29124F2E4FB6DB00FABCB7 /* HomeCacheModel.swift in Sources */,
 				EA2912572E4FB6DB00FABCB7 /* NetworkingError.swift in Sources */,
@@ -376,10 +342,8 @@
 				EA921CE12E4D49A400B90FA2 /* DownloadsViewController.swift in Sources */,
 				EA29126A2E4FD06600FABCB7 /* MovieCell.swift in Sources */,
 				EA921CE22E4D49A400B90FA2 /* HomeViewController.swift in Sources */,
-				EA921CE32E4D49A400B90FA2 /* IncomingViewController.swift in Sources */,
 				EA29123C2E4FB47000FABCB7 /* Constants.swift in Sources */,
 				EA921CE42E4D49A400B90FA2 /* MainTabBarController.swift in Sources */,
-				EA921CE52E4D49A400B90FA2 /* SearchViewController.swift in Sources */,
 				EA2912742E4FD3DE00FABCB7 /* MovieDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -619,14 +583,6 @@
 				minimumVersion = 8.5.0;
 			};
 		};
-		EA921C9F2E4D41CA00B90FA2 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.5.2;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -649,11 +605,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EA921C9C2E4D41B600B90FA2 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		EA921CA02E4D41CA00B90FA2 /* Lottie */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = EA921C9F2E4D41CA00B90FA2 /* XCRemoteSwiftPackageReference "lottie-ios" */;
-			productName = Lottie;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

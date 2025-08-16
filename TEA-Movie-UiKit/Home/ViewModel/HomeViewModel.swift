@@ -9,18 +9,19 @@ import Foundation
 
 @MainActor
 final class HomeViewModel {
-
+    
     // MARK: - Outputs
     private(set) var movies: [ShowModel] = []
-
+    private(set) var favouriteMovies: [ShowModel] = []
     var onDataUpdated: (() -> Void)?
     var onLoading: ((Bool) -> Void)?
     var onError: ((Error) -> Void)?
-
+    var onFavouritesUpdated: (() -> Void)?
+    
     private let networkingService: NetworkingService
     private let cacheFileName: String
     private let fileManager: FileManager
-
+    
     init(networkingService: NetworkingService = .shared,
          cacheFileName: String = Constants.HomeCashedFileName,
          fileManager: FileManager = .default) {
@@ -28,7 +29,7 @@ final class HomeViewModel {
         self.cacheFileName = cacheFileName
         self.fileManager = fileManager
     }
-
+    
     // MARK: - Fetch API
     func load() async {
         onLoading?(true)
@@ -53,21 +54,33 @@ final class HomeViewModel {
         }
         onLoading?(false)
     }
-
+    
     func numberOfRows() -> Int {
         movies.count
     }
-
+    
     func movie(at indexPath: IndexPath) -> ShowModel {
         movies[indexPath.row]
     }
-
+    func toggleFavourite(for movie: ShowModel) {
+        if let index = favouriteMovies.firstIndex(where: { $0.id == movie.id }) {
+            favouriteMovies.remove(at: index)
+        } else {
+            favouriteMovies.append(movie)
+        }
+        onFavouritesUpdated?()
+    }
+    
+    func isFavourite(_ movie: ShowModel) -> Bool {
+        favouriteMovies.contains { $0.id == movie.id }
+    }
+    
     // MARK: - Cache
     private func cacheFileURL() -> URL {
         let caches = fileManager.urls(for: .cachesDirectory, in: .userDomainMask).first!
         return caches.appendingPathComponent(cacheFileName)
     }
-
+    
     private func loadFromCache() -> Bool {
         let url = cacheFileURL()
         guard fileManager.fileExists(atPath: url.path) else { return false }
@@ -80,7 +93,7 @@ final class HomeViewModel {
             return false
         }
     }
-
+    
     private func saveToCache() {
         let cacheData = HomeCacheModel(movies: self.movies)
         do {

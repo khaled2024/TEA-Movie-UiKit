@@ -8,8 +8,13 @@
 import UIKit
 import SDWebImage
 import Cosmos
+
+protocol MovieCellDelegate: AnyObject {
+    func didTapFavourite(on cell: MovieCell)
+}
 class MovieCell: UITableViewCell {
     
+    @IBOutlet weak var favBtn: UIButton!
     @IBOutlet weak var movieCellView: UIView!
     @IBOutlet weak var CosmosView: CosmosView!
     @IBOutlet weak var dateOfMovieLabel: UILabel!
@@ -19,6 +24,8 @@ class MovieCell: UITableViewCell {
         super.awakeFromNib()
         setUpCellApperance()
     }
+    weak var delegate: MovieCellDelegate?
+    private var isFav = false
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -35,7 +42,7 @@ class MovieCell: UITableViewCell {
         movieImage.layer.cornerRadius = 15
         movieImage.contentMode = .scaleAspectFill
     }
-    func setMovie(movie: ShowModel){
+    func setMovie(movie: ShowModel, isFavourite: Bool){
         self.movieImage.sd_setImage(with: URL(string: movie.posterImageURL))
         self.titlelabel.text = movie.title
         self.dateOfMovieLabel.text = movie.releaseDate ?? ""
@@ -45,6 +52,13 @@ class MovieCell: UITableViewCell {
         CosmosView.settings.starSize = 16
         let fiveStar = ((movie.voteAverage ?? 0) / 10.0) * 5.0
         CosmosView.rating = fiveStar
+        
+        let imageName = isFavourite ? "heart.fill" : "heart"
+        favBtn.setImage(UIImage(systemName: imageName), for: .normal)
+        
+    }
+    @IBAction func favouriteBtnTapped(_ sender: UIButton) {
+        delegate?.didTapFavourite(on: self)
     }
     
 }

@@ -95,25 +95,16 @@ final class MainTabBarController: UITabBarController {
     private func setupTabs() {
         
         let home = HomeViewController(nibName: "HomeViewController", bundle: nil)
-        let search = SearchViewController(nibName: "SearchViewController", bundle: nil)
         let downloads = DownloadsViewController(nibName: "DownloadsViewController", bundle: nil)
-        let incomingView = IncomingViewController(nibName: "IncomingViewController", bundle: nil)
         
         let navHome = UINavigationController(rootViewController: home)
-        let navSearch = UINavigationController(rootViewController: search)
+      
         let navDownloads = UINavigationController(rootViewController: downloads)
-        let navIncoming = UINavigationController(rootViewController: incomingView)
         
         navHome.tabBarItem = UITabBarItem(title: "Home",
                                           image: UIImage(systemName: "house"),
                                           selectedImage: UIImage(systemName: "house.fill"))
         
-        navSearch.tabBarItem = UITabBarItem(title: "Search",
-                                            image: UIImage(systemName: "magnifyingglass"),
-                                            selectedImage: UIImage(systemName: "magnifyingglass"))
-        navIncoming.tabBarItem = UITabBarItem(title: "Incoming",
-                                              image:UIImage(systemName: "movieclapper"),
-                                              selectedImage: UIImage(systemName: "movieclapper.fill"))
         
         navDownloads.tabBarItem = UITabBarItem(title: "Downloads",
                                                image: UIImage(systemName: "arrow.down.circle"),
@@ -122,7 +113,7 @@ final class MainTabBarController: UITabBarController {
         
         
         
-        viewControllers = [navHome, navSearch, navIncoming, navDownloads]
+        viewControllers = [navHome, navDownloads]
     }
     private func animateContentFade() {
         guard let v = selectedViewController?.view else { return }

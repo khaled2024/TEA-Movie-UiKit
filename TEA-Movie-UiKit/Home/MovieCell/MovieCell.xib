@@ -29,13 +29,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Super Man" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="yzO-Sa-7Th">
-                                <rect key="frame" x="110" y="11.666666666666666" width="259" height="21.666666666666671"/>
+                                <rect key="frame" x="110" y="6.6666666666666661" width="259" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vx5-ih-DtJ">
-                                <rect key="frame" x="110" y="43" width="36" height="17"/>
+                                <rect key="frame" x="110" y="48" width="36" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,6 +52,9 @@
                                     <imageReference key="image" image="heart.fill" catalog="system" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
+                                <connections>
+                                    <action selector="favouriteBtnTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="JLJ-xU-Cff"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hun-X9-HaM" customClass="CosmosView" customModule="Cosmos">
                                 <rect key="frame" x="110" y="66.333333333333329" width="140" height="30"/>
@@ -70,10 +73,10 @@
                             <constraint firstItem="qfV-Rf-see" firstAttribute="centerY" secondItem="U6b-tg-IgT" secondAttribute="centerY" id="7nh-N1-wcI"/>
                             <constraint firstItem="Hun-X9-HaM" firstAttribute="leading" secondItem="vx5-ih-DtJ" secondAttribute="leading" id="87X-Q4-BBb"/>
                             <constraint firstAttribute="trailing" secondItem="qfV-Rf-see" secondAttribute="trailing" constant="10" id="Mnr-gf-tO6"/>
-                            <constraint firstItem="yzO-Sa-7Th" firstAttribute="top" secondItem="TPH-qf-bsc" secondAttribute="top" constant="5" id="RFz-TU-lwB"/>
+                            <constraint firstItem="yzO-Sa-7Th" firstAttribute="top" secondItem="TPH-qf-bsc" secondAttribute="top" id="RFz-TU-lwB"/>
                             <constraint firstItem="TPH-qf-bsc" firstAttribute="centerY" secondItem="U6b-tg-IgT" secondAttribute="centerY" id="axe-AR-jxx"/>
                             <constraint firstItem="TPH-qf-bsc" firstAttribute="height" secondItem="U6b-tg-IgT" secondAttribute="height" multiplier="0.87" id="cFd-dh-kGA"/>
-                            <constraint firstItem="vx5-ih-DtJ" firstAttribute="centerY" secondItem="TPH-qf-bsc" secondAttribute="centerY" id="qIi-os-QfC"/>
+                            <constraint firstItem="vx5-ih-DtJ" firstAttribute="centerY" secondItem="TPH-qf-bsc" secondAttribute="centerY" constant="5" id="qIi-os-QfC"/>
                             <constraint firstItem="qfV-Rf-see" firstAttribute="leading" secondItem="yzO-Sa-7Th" secondAttribute="trailing" constant="10" id="r2Y-0N-fVc"/>
                             <constraint firstItem="yzO-Sa-7Th" firstAttribute="leading" secondItem="TPH-qf-bsc" secondAttribute="trailing" constant="10" id="zCo-cK-MPg"/>
                         </constraints>
@@ -90,6 +93,7 @@
             <connections>
                 <outlet property="CosmosView" destination="Hun-X9-HaM" id="SW6-d3-Sjs"/>
                 <outlet property="dateOfMovieLabel" destination="vx5-ih-DtJ" id="oyO-nq-qnh"/>
+                <outlet property="favBtn" destination="qfV-Rf-see" id="s29-sg-ZwK"/>
                 <outlet property="movieCellView" destination="U6b-tg-IgT" id="9fz-UI-575"/>
                 <outlet property="movieImage" destination="TPH-qf-bsc" id="fS4-Su-g0v"/>
                 <outlet property="titlelabel" destination="yzO-Sa-7Th" id="bbD-oh-bfu"/>

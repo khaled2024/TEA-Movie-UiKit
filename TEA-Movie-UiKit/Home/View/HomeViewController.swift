@@ -41,6 +41,19 @@ class HomeViewController: UIViewController {
             .foregroundColor: UIColor.label,
             .font: UIFont.boldSystemFont(ofSize: 34)
         ]
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+              image: UIImage(systemName: "heart.fill"),
+              style: .plain,
+              target: self,
+              action: #selector(openFavourites)
+          )
+        navigationItem.rightBarButtonItem?.tintColor = .systemRed
+    }
+    
+    @objc private func openFavourites() {
+        let favVC = DownloadsViewController(nibName: "DownloadsViewController", bundle: nil)
+        favVC.favourites = viewModel.favouriteMovies
+        navigationController?.pushViewController(favVC, animated: true)
     }
     private func bindViewModel() {
         viewModel.onDataUpdated = { [weak self] in
@@ -58,6 +71,10 @@ class HomeViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             self?.present(alert, animated: true)
         }
+        viewModel.onFavouritesUpdated = { [weak self] in
+            guard let self else{return}
+            self.moviesTableView.reloadData()
+        }
     }
     
 }
@@ -69,7 +86,9 @@ extension HomeViewController: UITableViewDelegate , UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
         let movie = viewModel.movie(at: indexPath)
-        cell.setMovie(movie: movie)
+        let isFav = viewModel.isFavourite(movie)
+        cell.delegate = self
+        cell.setMovie(movie: movie,isFavourite: isFav)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,6 +99,17 @@ extension HomeViewController: UITableViewDelegate , UITableViewDataSource{
         let movie = viewModel.movie(at: indexPath)
         movieDetailsVC.movie = movie
         self.navigationController?.pushViewController(movieDetailsVC, animated: true)
+    }
+}
+
+extension HomeViewController: MovieCellDelegate{
+    func didTapFavourite(on cell: MovieCell) {
+        print("tapped")
+        guard let indexPath = moviesTableView.indexPath(for: cell) else { return }
+        let movie = viewModel.movie(at: indexPath)
+        viewModel.toggleFavourite(for: movie)
+        moviesTableView.reloadRows(at: [indexPath], with: .none)
+        print("fav movies \(viewModel.favouriteMovies)")
     }
     
 }
